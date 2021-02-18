@@ -1,0 +1,3 @@
+name,coordX,coordY,health,heartCount,loyal,meleeWeapon,chapterName,parentLegion
+Land,15,-31,100,2,true,POWER_SWORD,Cris,Legion
+
