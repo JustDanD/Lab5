@@ -1,6 +1,7 @@
 package com.JD.lab5;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Map;
 
 import org.supercsv.cellprocessor.*;
@@ -32,15 +33,22 @@ public class IO {
     }
 
     public static void readFrom(String path) {
+        ArrayList<SpaceMarine> inputList = new ArrayList<SpaceMarine>();
         Map<String, String> env = System.getenv();
-        String fileName = System.getenv(path);
+        String fileName = "src/test/testfiles/test1.csv";
         try (BufferedInputStream in = new BufferedInputStream(new FileInputStream(fileName))) {
             InputStreamReader inr = new InputStreamReader(in);
             CsvBeanReader beanReader = new CsvBeanReader(inr, CsvPreference.STANDARD_PREFERENCE);
             String[] header = beanReader.getHeader(true);
             final CellProcessor[] processors = getProcessors();
-            CsvMarine m = beanReader.read(CsvMarine.class, header, processors);
-            System.out.println(m);
+            CsvMarine m;
+            while ((m = beanReader.read(CsvMarine.class, header, processors)) != null) {
+                inputList.add(
+                              new SpaceMarine(m.getName(), new Coordinates(m.getCoordX(), m.getCoordY()), m.getHealth(),
+                                              m.getHeartCount(), m.getLoyal(), m.getMeleeWeapon(), new Chapter(m.getChapterName(), m.getParentLegion()))
+                );
+            }
+            System.out.println(inputList);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
