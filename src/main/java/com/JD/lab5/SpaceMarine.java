@@ -24,7 +24,10 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
             System.exit(0); //Exception
         if (idStack == null)
            initIdStack();
-        this.id = idStack.lastElement() + 1;
+        int i = 0;
+        while (idStack.contains(idStack.lastElement() + i))
+            i++;
+        this.id = idStack.lastElement() + i;
         idStack.push(this.id);
         this.name = name;
         this.coordinates = coordinates;
