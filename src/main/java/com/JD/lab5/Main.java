@@ -1,9 +1,12 @@
 package com.JD.lab5;
 
+import java.util.TreeSet;
+
 public class Main {
     public static void main(String[] args) {
-        SpaceMarine.setMarinesCnt(0);
-        //SpaceMarine m1 = new SpaceMarine("Lancaster", new Coordinates(1, 2F), 15D, 2, true, MeleeWeapon.POWER_FIST, new Chapter("name", ""));
-        IO.readFrom("FILENAME");
+        TreeSet<SpaceMarine> collection;
+        collection = IO.readFrom("FILENAME");
+        collection.add(new SpaceMarine("Lancaster", new Coordinates(1, 2F), 15D, 2, true, MeleeWeapon.POWER_FIST, new Chapter("name", "")));
+        System.out.printf(collection.toString());
     }
 }

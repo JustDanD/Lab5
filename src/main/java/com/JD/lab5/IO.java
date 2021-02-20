@@ -29,7 +29,7 @@ public class IO {
         return processors;
     }
 
-    public static void readFrom(String path) {
+    public static TreeSet<SpaceMarine> readFrom(String path) {
         TreeSet<SpaceMarine> inputTree = new TreeSet<SpaceMarine>();
         String fileName = System.getenv(path);
         try (BufferedInputStream in = new BufferedInputStream(new FileInputStream(fileName))) {
@@ -39,14 +39,11 @@ public class IO {
             final CellProcessor[] processors = getProcessors();
             SpaceMarine m;
             while ((m = beanReader.read(SpaceMarine.class, header, processors)) != null) {
-                /*if (m.isLoyal())
-                    m.setLoyal(false);*/
                 inputTree.add(m);
             }
-
-            System.out.println(inputTree);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        return inputTree;
     }
 }
