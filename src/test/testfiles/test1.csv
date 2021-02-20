@@ -1,3 +1,2 @@
-name,coordX,coordY,health,heartCount,loyal,meleeWeapon,chapterName,parentLegion
-Land,15,-31,100,2,true,POWER_SWORD,Cris,Legion
-Lux,11,-15125,50,1,,CHAIN_AXE,Circus,Legion
+id;name;coordinates;creationDate;health;heartCount;loyal;meleeWeapon;chapter
+1;Lux;151,-100;2021-02-20;100;2;true;POWER_FIST;chars,first

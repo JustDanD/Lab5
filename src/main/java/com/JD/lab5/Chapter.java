@@ -18,4 +18,20 @@ public class Chapter {
                 ", parentLegion='" + parentLegion + '\'' +
                 '}';
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getParentLegion() {
+        return parentLegion;
+    }
+
+    public void setParentLegion(String parentLegion) {
+        this.parentLegion = parentLegion;
+    }
 }
