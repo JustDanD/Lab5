@@ -23,16 +23,16 @@ public class CsvMarine {
         return coordX;
     }
 
-    public void setCoordX(String coordX) {
-        this.coordX = Long.parseLong(coordX);
+    public void setCoordX(Long coordX) {
+        this.coordX = coordX;
     }
 
     public Float getCoordY() {
         return coordY;
     }
 
-    public void setCoordY(String coordY) {
-        this.coordY = Float.parseFloat(coordY);
+    public void setCoordY(Double coordY) {
+        this.coordY = coordY.floatValue();
     }
 
     public Double getHealth() {
@@ -47,16 +47,16 @@ public class CsvMarine {
         return heartCount;
     }
 
-    public void setHeartCount(String heartCount) {
-        this.heartCount = Long.parseLong(heartCount);
+    public void setHeartCount(Long heartCount) {
+        this.heartCount = heartCount;
     }
 
     public Boolean getLoyal() {
         return loyal;
     }
 
-    public void setLoyal(String loyal) {
-        this.loyal = Boolean.parseBoolean(loyal);
+    public void setLoyal(Boolean loyal) {
+        this.loyal = loyal;
     }
 
     public MeleeWeapon getMeleeWeapon() {

@@ -1,6 +1,6 @@
 package com.JD.lab5;
 
-public class Coordinates {
+public class Coordinates implements Comparable<Coordinates>{
     private long x;
     private Float y; // != NULL
 
@@ -17,5 +17,10 @@ public class Coordinates {
                 "x=" + x +
                 ", y=" + y +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Coordinates coordinates) {
+        return (int)((x + y) - (coordinates.x + coordinates.y));
     }
 }

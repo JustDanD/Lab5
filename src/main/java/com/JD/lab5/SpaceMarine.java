@@ -2,7 +2,7 @@ package com.JD.lab5;
 
 import java.time.format.DateTimeFormatter;
 
-public class SpaceMarine {
+public class SpaceMarine implements Comparable<SpaceMarine> {
     private Long id; // !=null, >0, unique, auto-generated.
     private String name; // !=null, !="".
     private Coordinates coordinates; // !=null.
@@ -50,5 +50,10 @@ public class SpaceMarine {
                 ", meleeWeapon=" + meleeWeapon +
                 ", chapter=" + chapter +
                 '}';
+    }
+
+    @Override
+    public int compareTo(SpaceMarine spaceMarine) {
+        return coordinates.compareTo(spaceMarine.coordinates);
     }
 }
