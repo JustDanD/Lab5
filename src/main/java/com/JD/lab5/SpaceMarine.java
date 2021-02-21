@@ -1,6 +1,7 @@
 package com.JD.lab5;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Stack;
@@ -84,8 +85,8 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
     public void setCoordinatesY(Float coordinates) {
         this.coordinates.setY(coordinates);
     }
-    public LocalDate getCreationDate() {
-        return creationDate;
+    public Date getCreationDate() {
+        return Date.from(creationDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
     }
 
     public void setCreationDate(java.util.Date creationDate) {

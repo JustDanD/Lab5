@@ -18,8 +18,10 @@ public class ParseChapter extends CellProcessorAdaptor implements StringCellProc
         this.validateInputNotNull(value, context);
         if (value instanceof String) {
             String[] parts = ((String) value).split(",");
-            if (parts.length != 2)
-                throw new SuperCsvCellProcessorException(String.format("Not enough coordinates"), context, this);
+            if (parts.length > 2 || parts.length < 1)
+                throw new SuperCsvCellProcessorException(String.format("Broken chapter"), context, this);
+            if (parts.length == 1)
+                return new Chapter(parts[0], "");
             return new Chapter(parts[0], parts[1]);
         }
         return null;

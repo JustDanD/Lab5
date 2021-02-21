@@ -8,5 +8,6 @@ public class Main {
         collection = IO.readFrom("FILENAM");
         collection.add(new SpaceMarine("Lancaster", new Coordinates(1, 2F), 15D, 2, true, MeleeWeapon.POWER_FIST, new Chapter("name", "")));
         System.out.printf(collection.toString());
+        IO.writeTo("src/test/testfiles/out1.csv", collection);
     }
 }
