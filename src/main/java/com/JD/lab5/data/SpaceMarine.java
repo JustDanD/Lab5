@@ -148,18 +148,22 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
     public String toString() {
         return "id=" + id +
                 ", name='" + name + '\'' +
-                ", coordinates=" + coordinates +
+                ", coordinates: " + coordinates +
                 ", creationDate=" + creationDate +
                 ", health=" + health +
                 ", heartCount=" + heartCount +
                 ", loyal=" + loyal +
                 ", meleeWeapon=" + meleeWeapon +
-                ", chapter=" + chapter +
+                ", chapter: " + chapter +
                 '\n';
     }
 
     @Override
     public int compareTo(SpaceMarine spaceMarine) {
         return coordinates.compareTo(spaceMarine.coordinates);
+    }
+
+    public void clear() {
+        idStack.remove(this.id);
     }
 }

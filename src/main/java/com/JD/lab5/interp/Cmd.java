@@ -23,6 +23,10 @@ public class Cmd {
         commandsMap.put("info", InfoCommand.class);
         commandsMap.put("show", ShowCommand.class);
         commandsMap.put("add", AddCommand.class);
+        commandsMap.put("update", UpdateCommand.class);
+        commandsMap.put("remove_by_id", RemoveCommand.class);
+        commandsMap.put("clear", ClearCommand.class);
+        commandsMap.put("save", SaveCommand.class);
         curCollection = col;
         startDate = LocalDateTime.now();
     }

@@ -57,7 +57,7 @@ public class IO {
                 inputTree.add(m);
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Ошибка загрухки:" + e.getMessage());
         }
         return inputTree;
     }
@@ -72,9 +72,10 @@ public class IO {
                 beanWriter.write(marine, header, processors);
             }
             beanWriter.close();
+            System.out.println("Коллекция успешно сохранена");
         }
         catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Ошибка сохранения:" + e.getMessage());
         }
     }
 }
