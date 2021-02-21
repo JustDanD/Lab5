@@ -13,10 +13,8 @@ public class Chapter {
 
     @Override
     public String toString() {
-        return "Chapter{" +
-                "name='" + name + '\'' +
-                ", parentLegion='" + parentLegion + '\'' +
-                '}';
+        return "chapter name ='" + name + '\'' +
+                ", parent legion='" + parentLegion + '\'';
     }
 
     public String getName() {

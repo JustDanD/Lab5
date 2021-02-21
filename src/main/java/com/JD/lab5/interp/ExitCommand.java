@@ -5,8 +5,8 @@ import com.JD.lab5.data.SpaceMarine;
 import java.util.TreeSet;
 
 public class ExitCommand extends Command {
-    public ExitCommand(String[] args, TreeSet<SpaceMarine> trg) {
-        super(args, trg);
+    public ExitCommand(String[] args, TreeSet<SpaceMarine> trg, Cmd cmd) {
+        super(args, trg, cmd);
     }
     @Override
     public void execute() {

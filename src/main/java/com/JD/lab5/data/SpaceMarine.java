@@ -121,7 +121,7 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
     }
 
     public void setMeleeWeapon(String meleeWeapon) {
-        this.meleeWeapon = MeleeWeapon.ParseMeleeWeapon(meleeWeapon);
+        this.meleeWeapon = MeleeWeapon.parseMeleeWeapon(meleeWeapon);
     }
 
     public Chapter getChapter() {
@@ -146,8 +146,7 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
 
     @Override
     public String toString() {
-        return "SpaceMarine{" +
-                "id=" + id +
+        return "id=" + id +
                 ", name='" + name + '\'' +
                 ", coordinates=" + coordinates +
                 ", creationDate=" + creationDate +
@@ -156,7 +155,7 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
                 ", loyal=" + loyal +
                 ", meleeWeapon=" + meleeWeapon +
                 ", chapter=" + chapter +
-                '}';
+                '\n';
     }
 
     @Override

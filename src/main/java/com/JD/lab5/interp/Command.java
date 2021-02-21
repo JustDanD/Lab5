@@ -9,13 +9,15 @@ import java.util.TreeSet;
 public abstract class Command {
     ArrayList<String> arguments;
     TreeSet<SpaceMarine> target;
-    public Command(String[] args, TreeSet<SpaceMarine> trg) {
+    Cmd curCMD;
+    public Command(String[] args, TreeSet<SpaceMarine> trg, Cmd cmd) {
         if(args != null) {
             arguments = new ArrayList<String>();
             arguments.addAll(Arrays.asList(args));
         }
         if (trg != null)
             target = trg;
+        curCMD = cmd;
     }
 
     public abstract void execute();

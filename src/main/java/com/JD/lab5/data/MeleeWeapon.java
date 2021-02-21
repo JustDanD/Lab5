@@ -6,7 +6,7 @@ public enum MeleeWeapon {
     POWER_BLADE,
     POWER_FIST;
 
-    public static  MeleeWeapon ParseMeleeWeapon( String input) {
+    public static  MeleeWeapon parseMeleeWeapon( String input) {
         switch (input) {
             default:
                 return null;
