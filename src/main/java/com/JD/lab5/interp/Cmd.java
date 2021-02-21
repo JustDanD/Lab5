@@ -11,7 +11,7 @@ import java.util.*;
 public class Cmd {
     private HashMap<String, Class> commandsMap;
     private static Cmd instance;
-    private Stack<Command> commandHistory;
+    private Stack<String> commandHistory;
     private TreeSet<SpaceMarine> curCollection;
     private LocalDateTime startDate;
 
@@ -27,8 +27,13 @@ public class Cmd {
         commandsMap.put("remove_by_id", RemoveCommand.class);
         commandsMap.put("clear", ClearCommand.class);
         commandsMap.put("save", SaveCommand.class);
+        commandsMap.put("add_if_min", AddMinCommand.class);
+        commandsMap.put("remove_lower", RemoveLowerCommand.class);
+        commandsMap.put("history", HistoryCommand.class);
+        commandsMap.put("print_descending", PrintDescendingCommand.class);
         curCollection = col;
         startDate = LocalDateTime.now();
+        commandHistory = new Stack<String>();
     }
 
     public LocalDateTime getStartDate() {
@@ -55,6 +60,7 @@ public class Cmd {
                 if (command != null) {
                     Command executedCom = (Command)command.getConstructor(params).newInstance(curArgs, curCollection, instance);
                     executedCom.execute();
+                    commandHistory.push(curCom);
                 }
                 else
                     System.out.println("Такой команды не существует");
@@ -63,5 +69,9 @@ public class Cmd {
                 System.out.println(e.getMessage());
             }
         }
+    }
+
+    public Stack<String> getCommandHistory() {
+        return commandHistory;
     }
 }
