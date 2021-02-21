@@ -15,7 +15,7 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
     private boolean loyal;
     private MeleeWeapon meleeWeapon; // !=null.
     private Chapter chapter; // !=null
-    static private Stack<Long> idStack;
+    private static Stack<Long> idStack;
     public SpaceMarine() {
     }
 
