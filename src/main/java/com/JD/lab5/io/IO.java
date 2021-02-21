@@ -1,11 +1,11 @@
-package com.JD.lab5;
+package com.JD.lab5.io;
 
+import com.JD.lab5.data.SpaceMarine;
 import org.supercsv.cellprocessor.*;
 import org.supercsv.cellprocessor.constraint.NotNull;
 import org.supercsv.cellprocessor.ift.CellProcessor;
 import org.supercsv.io.CsvBeanReader;
 import org.supercsv.io.CsvBeanWriter;
-import org.supercsv.io.ICsvBeanReader;
 import org.supercsv.io.ICsvBeanWriter;
 import org.supercsv.prefs.CsvPreference;
 
@@ -46,7 +46,7 @@ public class IO {
 
     public static TreeSet<SpaceMarine> readFrom(String path) {
         TreeSet<SpaceMarine> inputTree = new TreeSet<SpaceMarine>();
-        String fileName = "src/test/testfiles/out.csv";
+        String fileName = System.getenv(path);
         try (BufferedInputStream in = new BufferedInputStream(new FileInputStream(fileName))) {
             InputStreamReader inr = new InputStreamReader(in);
             CsvBeanReader beanReader = new CsvBeanReader(inr, CsvPreference.EXCEL_NORTH_EUROPE_PREFERENCE);

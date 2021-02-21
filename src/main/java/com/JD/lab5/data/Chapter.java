@@ -1,4 +1,4 @@
-package com.JD.lab5;
+package com.JD.lab5.data;
 
 public class Chapter {
     private String name; //!= null, != ""

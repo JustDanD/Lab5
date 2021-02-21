@@ -1,5 +1,6 @@
-package com.JD.lab5;
+package com.JD.lab5.io;
 
+import com.JD.lab5.data.Coordinates;
 import org.supercsv.cellprocessor.CellProcessorAdaptor;
 import org.supercsv.cellprocessor.ift.LongCellProcessor;
 import org.supercsv.cellprocessor.ift.StringCellProcessor;

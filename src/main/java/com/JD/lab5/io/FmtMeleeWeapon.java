@@ -1,23 +1,22 @@
-package com.JD.lab5;
+package com.JD.lab5.io;
 
-
-
+import com.JD.lab5.data.MeleeWeapon;
 import org.supercsv.cellprocessor.CellProcessorAdaptor;
 import org.supercsv.exception.SuperCsvCellProcessorException;
 import org.supercsv.util.CsvContext;
 
-public class FmtCoords extends CellProcessorAdaptor {
+public class FmtMeleeWeapon extends CellProcessorAdaptor {
 
 
-    public FmtCoords() {
+    public FmtMeleeWeapon() {
     }
 
     public Object execute(Object value, CsvContext context) {
         this.validateInputNotNull(value, context);
-        if (!(value instanceof Coordinates)) {
-            throw new SuperCsvCellProcessorException("Broken coordinates to write", context, this);
+        if (!(value instanceof MeleeWeapon)) {
+            throw new SuperCsvCellProcessorException("Broken weapon to write", context, this);
         } else {
-            String res = "" + ((Coordinates)value).getX() + "," + ((Coordinates)value).getY();
+            String res = "" + ((MeleeWeapon)value);
             return this.next.execute(res, context);
         }
     }
