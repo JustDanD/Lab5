@@ -20,8 +20,6 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
     }
 
     public SpaceMarine(String name, Coordinates coordinates, Double health, long heartCount, MeleeWeapon meleeWeapon, Chapter chapter) {
-        if (name == null || name.equals("") || coordinates == null || health == null || health <= 0 || heartCount <= 0 || heartCount > 3 || meleeWeapon == null || chapter == null)
-            System.exit(0); //Exception
         if (idStack == null)
            initIdStack();
         int i = 0;

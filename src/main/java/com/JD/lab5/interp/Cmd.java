@@ -31,6 +31,8 @@ public class Cmd {
         commandsMap.put("remove_lower", RemoveLowerCommand.class);
         commandsMap.put("history", HistoryCommand.class);
         commandsMap.put("print_descending", PrintDescendingCommand.class);
+        commandsMap.put("remove_any_by_chapter", RemoveByChapterCommand.class);
+        commandsMap.put("group_counting_by_heart_count", GroupCommand.class);
         curCollection = col;
         startDate = LocalDateTime.now();
         commandHistory = new Stack<String>();

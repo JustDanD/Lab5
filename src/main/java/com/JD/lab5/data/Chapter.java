@@ -1,5 +1,7 @@
 package com.JD.lab5.data;
 
+import java.util.Objects;
+
 public class Chapter {
     private String name; //!= null, != ""
     private String parentLegion;
@@ -31,5 +33,19 @@ public class Chapter {
 
     public void setParentLegion(String parentLegion) {
         this.parentLegion = parentLegion;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Chapter chapter = (Chapter) o;
+        return Objects.equals(name, chapter.name) &&
+                Objects.equals(parentLegion, chapter.parentLegion);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, parentLegion);
     }
 }

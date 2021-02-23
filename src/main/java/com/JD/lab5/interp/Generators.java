@@ -18,8 +18,7 @@ public class Generators {
         long heartCount; // >0, <=3;
         boolean loyal;
         MeleeWeapon meleeWeapon; // !=null.
-        String chapterName; // !=null
-        String parentLegion;
+        Chapter chapter;
         System.out.println("Введите имя корабля:");
         while(true) {
             if (!(input = in.nextLine()).equals("")) {
@@ -94,6 +93,15 @@ public class Generators {
             else
                 break;
         }
+        chapter = chapterGenerate();
+        return new SpaceMarine(name, new Coordinates(x, y), health, heartCount, loyal, meleeWeapon, chapter);
+    }
+
+    public static Chapter chapterGenerate(){
+        Scanner in = new Scanner(System.in);
+        String input;
+        String chapterName;
+        String parentLegion;
         System.out.println("Введите название части:");
         while(true) {
             if (!(input = in.nextLine()).equals("")) {
@@ -110,6 +118,6 @@ public class Generators {
                 parentLegion = null;
             break;
         }
-        return new SpaceMarine(name, new Coordinates(x, y), health, heartCount, loyal, meleeWeapon, new Chapter(chapterName, parentLegion));
+        return new Chapter(chapterName, parentLegion);
     }
 }
