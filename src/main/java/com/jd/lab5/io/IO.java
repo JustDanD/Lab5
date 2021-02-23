@@ -48,7 +48,7 @@ public class IO {
         String fileName = System.getenv(path);
         if (fileName == null) {
             System.out.println("Нет такой переменной окуржения");
-            return null;
+            return inputTree;
         }
         try (BufferedInputStream in = new BufferedInputStream(new FileInputStream(fileName))) {
             InputStreamReader inr = new InputStreamReader(in);
