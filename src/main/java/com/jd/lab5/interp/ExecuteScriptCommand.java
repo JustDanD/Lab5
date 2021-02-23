@@ -4,6 +4,7 @@ import com.jd.lab5.data.SpaceMarine;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
+import java.io.InputStream;
 import java.util.Stack;
 import java.util.TreeSet;
 
@@ -23,6 +24,7 @@ public class ExecuteScriptCommand extends Command {
 
     @Override
     public void execute() {
+        InputStream oldIn = System.in;
         if (executedScripts.contains(arguments.get(1))) {
             System.out.println("Не бывать в нашем царстве рекурсии.");
             return;
@@ -33,7 +35,9 @@ public class ExecuteScriptCommand extends Command {
             System.setIn(in);
             scriptCMD.listen();
             executedScripts.pop();
+            System.setIn(oldIn);
         } catch (Exception e) {
+            System.setIn(oldIn);
             System.out.println("Ошибка загрузки:" + e.getMessage());
             executedScripts.pop();
         }
