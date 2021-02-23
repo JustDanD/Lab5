@@ -1,6 +1,6 @@
-package com.JD.lab5.io;
+package com.jd.lab5.io;
 
-import com.JD.lab5.data.SpaceMarine;
+import com.jd.lab5.data.SpaceMarine;
 import org.supercsv.cellprocessor.*;
 import org.supercsv.cellprocessor.constraint.NotNull;
 import org.supercsv.cellprocessor.ift.CellProcessor;

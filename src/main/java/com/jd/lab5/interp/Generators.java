@@ -1,9 +1,9 @@
-package com.JD.lab5.interp;
+package com.jd.lab5.interp;
 
-import com.JD.lab5.data.Chapter;
-import com.JD.lab5.data.Coordinates;
-import com.JD.lab5.data.MeleeWeapon;
-import com.JD.lab5.data.SpaceMarine;
+import com.jd.lab5.data.Chapter;
+import com.jd.lab5.data.Coordinates;
+import com.jd.lab5.data.MeleeWeapon;
+import com.jd.lab5.data.SpaceMarine;
 import com.google.gson.Gson;
 
 import java.util.Scanner;

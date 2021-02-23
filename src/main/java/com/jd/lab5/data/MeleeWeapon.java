@@ -1,4 +1,4 @@
-package com.JD.lab5.data;
+package com.jd.lab5.data;
 
 public enum MeleeWeapon {
     POWER_SWORD,

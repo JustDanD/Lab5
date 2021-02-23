@@ -1,13 +1,9 @@
-package com.JD.lab5;
+package com.jd.lab5;
 
-import com.JD.lab5.data.Chapter;
-import com.JD.lab5.data.Coordinates;
-import com.JD.lab5.data.MeleeWeapon;
-import com.JD.lab5.data.SpaceMarine;
-import com.JD.lab5.interp.Cmd;
-import com.JD.lab5.io.IO;
+import com.jd.lab5.data.SpaceMarine;
+import com.jd.lab5.interp.Cmd;
+import com.jd.lab5.io.IO;
 
-import java.util.Collection;
 import java.util.TreeSet;
 
 public class Main {

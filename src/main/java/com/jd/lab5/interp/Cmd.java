@@ -1,6 +1,6 @@
-package com.JD.lab5.interp;
+package com.jd.lab5.interp;
 
-import com.JD.lab5.data.SpaceMarine;
+import com.jd.lab5.data.SpaceMarine;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;

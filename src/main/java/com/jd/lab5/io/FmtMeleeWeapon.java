@@ -1,6 +1,6 @@
-package com.JD.lab5.io;
+package com.jd.lab5.io;
 
-import com.JD.lab5.data.MeleeWeapon;
+import com.jd.lab5.data.MeleeWeapon;
 import org.supercsv.cellprocessor.CellProcessorAdaptor;
 import org.supercsv.exception.SuperCsvCellProcessorException;
 import org.supercsv.util.CsvContext;

@@ -1,7 +1,7 @@
-package com.JD.lab5.interp;
+package com.jd.lab5.interp;
 
-import com.JD.lab5.data.SpaceMarine;
-import com.JD.lab5.io.IO;
+import com.jd.lab5.data.SpaceMarine;
+import com.jd.lab5.io.IO;
 
 import java.util.TreeSet;
 
@@ -12,6 +12,6 @@ public class SaveCommand extends Command {
 
     @Override
     public void execute() {
-        IO.writeTo("src/test/testfiles/out.csv", target);
+        IO.writeTo("out.csv", target);
     }
 }
