@@ -6,21 +6,21 @@ import java.util.Date;
 import java.util.Stack;
 
 public class SpaceMarine implements Comparable<SpaceMarine> {
-    private Long id; // !=null, >0, unique, auto-generated.
-    private String name; // !=null, !="".
-    private Coordinates coordinates; // !=null.
-    private LocalDate creationDate; // !=null, auto-generated.
-    private Double health; // !=null, >0.
-    private long heartCount; // >0, <=3;
+    private Long id;
+    private String name;
+    private Coordinates coordinates;
+    private LocalDate creationDate;
+    private Double health;
+    private long heartCount;
     private boolean loyal;
-    private MeleeWeapon meleeWeapon; // !=null.
-    private Chapter chapter; // !=null
+    private MeleeWeapon meleeWeapon;
+    private Chapter chapter;
     private static Stack<Long> idStack;
 
     public SpaceMarine() {
     }
 
-    public SpaceMarine(String name, Coordinates coordinates, Double health, long heartCount, MeleeWeapon meleeWeapon, Chapter chapter) {
+    public SpaceMarine(String name, Coordinates coordinates, Double health, long heartCount, boolean loyal, MeleeWeapon meleeWeapon, Chapter chapter) {
         if (idStack == null)
             initIdStack();
         int i = 0;
@@ -33,16 +33,10 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
         this.creationDate = LocalDate.now();
         this.health = health;
         this.heartCount = heartCount;
-        this.loyal = false;
+        this.loyal = loyal;
         this.meleeWeapon = meleeWeapon;
         this.chapter = chapter;
     }
-
-    public SpaceMarine(String name, Coordinates coordinates, Double health, long heartCount, boolean loyal, MeleeWeapon meleeWeapon, Chapter chapter) {
-        this(name, coordinates, health, heartCount, meleeWeapon, chapter);
-        this.loyal = loyal;
-    }
-
 
     public Long getId() {
         return id;

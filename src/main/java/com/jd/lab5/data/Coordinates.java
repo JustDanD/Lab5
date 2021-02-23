@@ -2,11 +2,9 @@ package com.JD.lab5.data;
 
 public class Coordinates implements Comparable<Coordinates> {
     private long x;
-    private Float y; // != NULL
+    private Float y;
 
     public Coordinates(long x, Float y) {
-        if (y == null)
-            System.exit(0); //Exception
         this.x = x;
         this.y = y;
     }

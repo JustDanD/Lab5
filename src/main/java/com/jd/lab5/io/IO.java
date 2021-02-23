@@ -16,7 +16,7 @@ import java.util.TreeSet;
 public class IO {
 
     private static CellProcessor[] getReadingProcessors() {
-        final CellProcessor[] processors = new CellProcessor[]{
+        return new CellProcessor[]{
                 new NotNull(new ParseLong()), //id
                 new NotNull(), //name
                 new NotNull(new ParseCoordinates()), //coordinates
@@ -27,11 +27,10 @@ public class IO {
                 new NotNull(), //MeleeWeapon
                 new NotNull(new ParseChapter()), //Chapter
         };
-        return processors;
     }
 
     private static CellProcessor[] getWritingProcessors() {
-        final CellProcessor[] processors = new CellProcessor[]{
+        return new CellProcessor[]{
                 new NotNull(new FmtNumber("")), //id
                 new NotNull(), //name
                 new NotNull(new FmtCoords()), //coordinates
@@ -42,12 +41,15 @@ public class IO {
                 new NotNull(new FmtMeleeWeapon()), //MeleeWeapon
                 new NotNull(new FmtChapter()), //Chapter
         };
-        return processors;
     }
 
     public static TreeSet<SpaceMarine> readFrom(String path) {
         TreeSet<SpaceMarine> inputTree = new TreeSet<SpaceMarine>();
         String fileName = System.getenv(path);
+        if (fileName == null) {
+            System.out.println("Нет такой переменной окуржения");
+            return null;
+        }
         try (BufferedInputStream in = new BufferedInputStream(new FileInputStream(fileName))) {
             InputStreamReader inr = new InputStreamReader(in);
             CsvBeanReader beanReader = new CsvBeanReader(inr, CsvPreference.EXCEL_NORTH_EUROPE_PREFERENCE);

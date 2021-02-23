@@ -3,19 +3,17 @@ package com.JD.lab5.data;
 import java.util.Objects;
 
 public class Chapter {
-    private String name; //!= null, != ""
+    private String name;
     private String parentLegion;
 
     public Chapter(String name, String parentLegion) {
-        if (name == null || name == "")
-            System.exit(0); //Exception
         this.name = name;
         this.parentLegion = parentLegion;
     }
 
     @Override
     public String toString() {
-        return "chapter name ='" + name + '\'' +
+        return "chapter name='" + name + '\'' +
                 ", parent legion='" + parentLegion + '\'';
     }
 

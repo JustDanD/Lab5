@@ -12,13 +12,13 @@ public class Generators {
     public static SpaceMarine marineGenerate() {
         Scanner in = new Scanner(System.in);
         String input;
-        String name; // !=null, !="".
+        String name;
         long x;
-        Float y; //!=null
-        Double health; // !=null, >0.
-        long heartCount; // >0, <=3;
+        float y;
+        double health;
+        long heartCount;
         boolean loyal;
-        MeleeWeapon meleeWeapon; // !=null.
+        MeleeWeapon meleeWeapon;
         Chapter chapter;
         System.out.println("Введите имя корабля:");
         while (true) {

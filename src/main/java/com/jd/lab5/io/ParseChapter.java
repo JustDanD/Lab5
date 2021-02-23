@@ -22,7 +22,7 @@ public class ParseChapter extends CellProcessorAdaptor implements StringCellProc
         if (value instanceof String) {
             String[] parts = ((String) value).split(",");
             if (parts.length > 2 || parts.length < 1)
-                throw new SuperCsvCellProcessorException(String.format("Broken chapter"), context, this);
+                throw new SuperCsvCellProcessorException("Broken chapter", context, this);
             if (parts.length == 1)
                 return new Chapter(parts[0], "");
             return new Chapter(parts[0], parts[1]);

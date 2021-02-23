@@ -9,12 +9,11 @@ import java.util.Stack;
 import java.util.TreeSet;
 
 public class Cmd {
-    private HashMap<String, Class> commandsMap;
-    //private static Cmd instance;
-    private Stack<String> commandHistory;
-    private TreeSet<SpaceMarine> curCollection;
-    private LocalDateTime startDate;
-    private boolean isInteractive;
+    private final HashMap<String, Class> commandsMap;
+    private final Stack<String> commandHistory;
+    private final TreeSet<SpaceMarine> curCollection;
+    private final LocalDateTime startDate;
+    private final boolean isInteractive;
 
     public Cmd(TreeSet<SpaceMarine> col, boolean isInteractive, Cmd parent) {
         if (isInteractive) {
@@ -54,12 +53,6 @@ public class Cmd {
         return isInteractive;
     }
 
-    /*public static Cmd initCmd(TreeSet<SpaceMarine> col) {
-        if (instance == null)
-            instance = new Cmd(col);
-        return instance;
-    }*/
-
     public void listen() {
         Scanner in = new Scanner(System.in);
         String curCom = "";
@@ -72,7 +65,7 @@ public class Cmd {
             try {
                 Class command = (commandsMap.get(curCom));
                 if (command != null) {
-                    Command executedCom = (Command) command.getConstructor(params).newInstance(curArgs, curCollection, this);
+                    Command executedCom = (Command)(command.getConstructor(params).newInstance(curArgs, curCollection, this));
                     executedCom.execute();
                     commandHistory.push(curCom);
                 } else
