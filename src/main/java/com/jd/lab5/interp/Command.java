@@ -6,6 +6,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.TreeSet;
 
+/**
+ * @author Пименов Данила P3130
+ * Абстрактный класс команды. Является родительским для всех классов команд.
+ * Поля:
+ * arguments - содержит аргументы команды в их строковом представлении
+ * target - коллекция, с которой взаимодействует команда
+ * curCMD - объект окружения, вызвавшего команду
+ */
 public abstract class Command {
     ArrayList<String> arguments;
     TreeSet<SpaceMarine> target;
@@ -21,6 +29,9 @@ public abstract class Command {
         curCMD = cmd;
     }
 
+    /**
+     * Метод, исполяющий команду
+     */
     public abstract void execute();
 
 }

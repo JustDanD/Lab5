@@ -8,6 +8,16 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.TreeSet;
 
+/**
+ * @author Пименов Данила P3130
+ * Класс-интерпретатор. Отвечает за считывание команд и их аргументов, вызывает обработчики.
+ * Поля:
+ * commandsMap - карта комманд, соответствующая шаболну имя_команды - класс_обработчик
+ * commandHistory - стэк, содержащий предыдущие команды
+ * curCollection - колдекция, с которой взаимодействует пользователь
+ * startDate - дата и время инициализации интерпретатора
+ * isInteractive - режим работы интерператора
+ */
 public class Cmd {
     private final HashMap<String, Class> commandsMap;
     private final Stack<String> commandHistory;
@@ -15,6 +25,12 @@ public class Cmd {
     private final LocalDateTime startDate;
     private final boolean isInteractive;
 
+    /**
+     * Констурктор
+     * @param col - текущая коллекция
+     * @param isInteractive - режим работы
+     * @param parent - родительский интепретатор(если есть)
+     */
     public Cmd(TreeSet<SpaceMarine> col, boolean isInteractive, Cmd parent) {
         if (isInteractive) {
             System.out.println("Доброго времени суток, уважаемый юзер.\nДобро пожаловать в систему управления вашей коллекцией космических корбалей!\nПриятного пользования!\nДля просмотра существующих команд введите help.");
@@ -53,6 +69,9 @@ public class Cmd {
         return isInteractive;
     }
 
+    /**
+     * Метод, прослушивающий и обрабатывающий пользовательский ввод
+     */
     public void listen() {
         Scanner in = new Scanner(System.in);
         String curCom = "";

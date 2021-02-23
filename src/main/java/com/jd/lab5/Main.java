@@ -6,6 +6,11 @@ import com.jd.lab5.io.IO;
 
 import java.util.TreeSet;
 
+/**
+ * @autor Пименов Данила, P3130
+ * Класс-инициализатор.
+ * Содержит метод main без параметров и без вовзращаемого значения
+ */
 public class Main {
     public static void main(String[] args) {
         TreeSet<SpaceMarine> collection;

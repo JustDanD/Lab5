@@ -4,7 +4,10 @@ package com.jd.lab5.interp;
 import com.jd.lab5.data.SpaceMarine;
 
 import java.util.TreeSet;
-
+/**
+ * @author Пименов Данила P3130
+ * Команда, выводящая подсказку по командам.
+ */
 public class HelpCommand extends Command {
     public HelpCommand(String[] args, TreeSet<SpaceMarine> trg, Cmd cmd) {
         super(args, trg, cmd);

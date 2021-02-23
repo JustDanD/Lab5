@@ -12,9 +12,14 @@ import org.supercsv.prefs.CsvPreference;
 import java.io.*;
 import java.util.TreeSet;
 
-
+/**
+ * @author Пименов Данила P3130
+ * Класс, отвечающий за загрузку/сохранение коллекции из/в файл(-а).
+ */
 public class IO {
-
+    /**
+     * Метод, возвращающий процессоры для чтения csv
+     */
     private static CellProcessor[] getReadingProcessors() {
         return new CellProcessor[]{
                 new NotNull(new ParseLong()), //id
@@ -28,7 +33,9 @@ public class IO {
                 new NotNull(new ParseChapter()), //Chapter
         };
     }
-
+    /**
+     * Метод, возвращающий процессоры для записи csv
+     */
     private static CellProcessor[] getWritingProcessors() {
         return new CellProcessor[]{
                 new NotNull(new FmtNumber("")), //id
@@ -43,6 +50,11 @@ public class IO {
         };
     }
 
+    /**
+     * Метод, загружащий коллекцию из файла
+     * @param path - путь к файлу
+     * @return TreeSet<SpaceMarine> - объект готовой коллекция
+     */
     public static TreeSet<SpaceMarine> readFrom(String path) {
         TreeSet<SpaceMarine> inputTree = new TreeSet<SpaceMarine>();
         String fileName = System.getenv(path);
@@ -65,6 +77,11 @@ public class IO {
         return inputTree;
     }
 
+    /**
+     * Метод, записывающий коллекцию в файл
+     * @param path - путь к файлу
+     * @param col - коллекция для сохранения
+     */
     public static void writeTo(String path, TreeSet<SpaceMarine> col) {
         try {
             ICsvBeanWriter beanWriter = new CsvBeanWriter(new BufferedWriter(new FileWriter(path)), CsvPreference.EXCEL_NORTH_EUROPE_PREFERENCE);

@@ -1,5 +1,10 @@
 package com.jd.lab5.data;
-
+/**
+ * @author Пименов Данила, P3130
+ * Перечисление, описывающее доступные варианты оружия
+ * POWER_SWORD, CHAIN_AXE, POWER_BLADE, POWER_FIST;
+ * Содержит парсер строки в оружие
+ */
 public enum MeleeWeapon {
     POWER_SWORD,
     CHAIN_AXE,

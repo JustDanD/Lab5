@@ -4,6 +4,10 @@ import com.jd.lab5.data.SpaceMarine;
 
 import java.util.TreeSet;
 
+/**
+ * @author Пименов Данила P3130
+ * Команда, выполнаяющая выход из программы...Усё. Совсем всё. Уходите.
+ */
 public class ExitCommand extends Command {
     public ExitCommand(String[] args, TreeSet<SpaceMarine> trg, Cmd cmd) {
         super(args, trg, cmd);

@@ -4,6 +4,11 @@ import com.jd.lab5.data.SpaceMarine;
 
 import java.util.TreeSet;
 
+/**
+ * @author Пименов Данила P3130
+ * Команда, добавляющяя элемент, если он меньше всех уже имеющихся
+ * Принимает либо JSON, либо пользовательский ввод.
+ */
 public class AddMinCommand extends Command {
     public AddMinCommand(String[] args, TreeSet<SpaceMarine> trg, Cmd cmd) {
         super(args, trg, cmd);

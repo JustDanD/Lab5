@@ -4,7 +4,10 @@ import com.jd.lab5.data.SpaceMarine;
 
 import java.util.Iterator;
 import java.util.TreeSet;
-
+/**
+ * @author Пименов Данила P3130
+ * Команда удаления всех элементов меньше данного
+ */
 public class RemoveLowerCommand extends Command {
     public RemoveLowerCommand(String[] args, TreeSet<SpaceMarine> trg, Cmd cmd) {
         super(args, trg, cmd);

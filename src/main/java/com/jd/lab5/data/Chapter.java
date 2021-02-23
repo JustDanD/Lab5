@@ -2,15 +2,27 @@ package com.jd.lab5.data;
 
 import java.util.Objects;
 
+/**
+ * @author Пименов Данила, P3130
+ * Класс, описывающий "часть"
+ * Содержит переопределённую логику toString, hasCode, equals, а также набор станадратных геттеров и сеттеров
+ */
 public class Chapter {
     private String name;
     private String parentLegion;
 
+    /**
+     * Констурктор
+     * @param name - название части
+     * @param parentLegion - родительское подразделение
+     */
     public Chapter(String name, String parentLegion) {
         this.name = name;
         this.parentLegion = parentLegion;
     }
-
+    /**
+     * Переопределние ToString
+     */
     @Override
     public String toString() {
         return "chapter name='" + name + '\'' +
@@ -33,6 +45,9 @@ public class Chapter {
         this.parentLegion = parentLegion;
     }
 
+    /**
+     * Перепопределение equals. Сравнение по обоим полям.
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

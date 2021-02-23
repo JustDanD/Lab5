@@ -7,6 +7,11 @@ import java.io.FileInputStream;
 import java.util.Stack;
 import java.util.TreeSet;
 
+/**
+ * @author Пименов Данила P3130
+ * Команда, исполняющая сторонний скрипт.
+ * Содержит в себе стэк с именами уже запущенных "сверху" скриптов.
+ */
 public class ExecuteScriptCommand extends Command {
     private static Stack<String> executedScripts;
 

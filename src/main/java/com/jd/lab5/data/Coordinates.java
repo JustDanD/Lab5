@@ -1,5 +1,10 @@
 package com.jd.lab5.data;
 
+/**
+ * @author Пименов Данила, P3130
+ * Класс, описывающий координаты.
+ * Реализует интерфейс Comparable.
+ */
 public class Coordinates implements Comparable<Coordinates> {
     private long x;
     private Float y;
@@ -32,6 +37,10 @@ public class Coordinates implements Comparable<Coordinates> {
                 ", y=" + y;
     }
 
+    /**
+     * Сравнение объектов по сумме координат.
+     * @param coordinates
+     */
     @Override
     public int compareTo(Coordinates coordinates) {
         return (int) ((x + y) - (coordinates.x + coordinates.y));

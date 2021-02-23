@@ -6,9 +6,11 @@ import org.supercsv.cellprocessor.CellProcessorAdaptor;
 import org.supercsv.exception.SuperCsvCellProcessorException;
 import org.supercsv.util.CsvContext;
 
+/**
+ * @author Пименов Данила P3130
+ * Выходной парсер для части
+ */
 public class FmtChapter extends CellProcessorAdaptor {
-
-
     public FmtChapter() {
     }
 

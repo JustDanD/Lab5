@@ -4,6 +4,11 @@ import com.jd.lab5.data.SpaceMarine;
 
 import java.util.TreeSet;
 
+/**
+ * @author Пименов Данила P3130
+ * * Команда добавления элемента в коллекцию.
+ * В зависиомсти от сценария прнимает JSON-объект или предлагает пользовательский ввод.
+ */
 public class AddCommand extends Command {
     public AddCommand(String[] args, TreeSet<SpaceMarine> trg, Cmd cmd) {
         super(args, trg, cmd);

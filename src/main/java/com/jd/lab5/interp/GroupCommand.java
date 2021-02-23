@@ -4,6 +4,10 @@ import com.jd.lab5.data.SpaceMarine;
 
 import java.util.TreeSet;
 
+/**
+ * @author Пименов Данила P3130
+ * Команда группировки по значению heartCount
+ */
 public class GroupCommand extends Command {
     public GroupCommand(String[] args, TreeSet<SpaceMarine> trg, Cmd cmd) {
         super(args, trg, cmd);

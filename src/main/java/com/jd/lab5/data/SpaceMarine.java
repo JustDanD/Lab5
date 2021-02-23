@@ -5,6 +5,12 @@ import java.time.ZoneId;
 import java.util.Date;
 import java.util.Stack;
 
+/**
+ * @author Пименов Данила, P3130
+ * Класс, описывающий модель космического корабля
+ * Содержит переопределённую логику toString, hasCode, equals, а также набор станадратных геттеров и сеттеров.
+ * Реализует интерфейс Comparable.
+ */
 public class SpaceMarine implements Comparable<SpaceMarine> {
     private Long id;
     private String name;
@@ -17,9 +23,22 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
     private Chapter chapter;
     private static Stack<Long> idStack;
 
+    /**
+     * Пустой констурктор. Используется SuperCSV.
+     */
     public SpaceMarine() {
     }
 
+    /**
+     * Конструктор
+     * @param name - имя корабля
+     * @param coordinates - объект координат
+     * @param health - количество здорвоья
+     * @param heartCount - количество жизней
+     * @param loyal - лояльность
+     * @param meleeWeapon - оружие
+     * @param chapter - часть
+     */
     public SpaceMarine(String name, Coordinates coordinates, Double health, long heartCount, boolean loyal, MeleeWeapon meleeWeapon, Chapter chapter) {
         if (idStack == null)
             initIdStack();
@@ -138,6 +157,9 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
         this.chapter.setParentLegion(Legion);
     }
 
+    /**
+     * Инициализация стэка ID
+     */
     private static void initIdStack() {
         idStack = new Stack<Long>();
         idStack.push(0L);
@@ -157,6 +179,9 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
                 '\n';
     }
 
+    /**
+     * Переопредление метода compareTo. Сравнение по координатам.
+     */
     @Override
     public int compareTo(SpaceMarine spaceMarine) {
         return coordinates.compareTo(spaceMarine.coordinates);

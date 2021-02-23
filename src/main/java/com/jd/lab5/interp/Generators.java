@@ -8,7 +8,15 @@ import com.google.gson.Gson;
 
 import java.util.Scanner;
 
+/**
+ * @author Пименов Данила P3130
+ * Класс, содержащий в себе генераторы объектов из тех или иных входных данных
+ */
 public class Generators {
+    /**
+     * Генератор объекта космического корабля из пользовательского ввода.
+     * @return SpaceMarine
+     */
     public static SpaceMarine marineGenerate() {
         Scanner in = new Scanner(System.in);
         String input;
@@ -94,6 +102,10 @@ public class Generators {
         return new SpaceMarine(name, new Coordinates(x, y), health, heartCount, loyal, meleeWeapon, chapter);
     }
 
+    /**
+     * Генератор объекта части из пользовательского ввода.
+     * @return Chapter
+     */
     public static Chapter chapterGenerate() {
         Scanner in = new Scanner(System.in);
         String input;
@@ -117,7 +129,10 @@ public class Generators {
         }
         return new Chapter(chapterName, parentLegion);
     }
-
+    /**
+     * Генератор объекта космического корабля из JSON-объекта.
+     * @return SpaceMarine
+     */
     public static SpaceMarine marineJSONGenerate(String input) {
         Gson gson = new Gson();
         try {
@@ -148,7 +163,10 @@ public class Generators {
         }
 
     }
-
+    /**
+     * Генератор объекта части из JSON-объекта.
+     * @return SpaceMarine
+     */
     public static Chapter chapterJSONGenerate(String input) {
         Gson gson = new Gson();
         try {

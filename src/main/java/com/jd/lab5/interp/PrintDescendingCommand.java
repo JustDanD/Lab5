@@ -4,7 +4,10 @@ import com.jd.lab5.data.SpaceMarine;
 
 import java.util.NavigableSet;
 import java.util.TreeSet;
-
+/**
+ * @author Пименов Данила P3130
+ * Команда, выводящая коллекцию в порядке убывания
+ */
 public class PrintDescendingCommand extends Command {
     public PrintDescendingCommand(String[] args, TreeSet<SpaceMarine> trg, Cmd cmd) {
         super(args, trg, cmd);

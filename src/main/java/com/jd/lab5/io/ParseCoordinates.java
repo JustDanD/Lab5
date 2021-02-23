@@ -7,6 +7,10 @@ import org.supercsv.cellprocessor.ift.StringCellProcessor;
 import org.supercsv.exception.SuperCsvCellProcessorException;
 import org.supercsv.util.CsvContext;
 
+/**
+ * @author Пименов Данила P3130
+ * Входной парсер для координат
+ */
 public class ParseCoordinates extends CellProcessorAdaptor implements StringCellProcessor {
     public ParseCoordinates() {
 

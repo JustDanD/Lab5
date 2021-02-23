@@ -4,7 +4,10 @@ import com.jd.lab5.data.SpaceMarine;
 
 import java.time.format.DateTimeFormatter;
 import java.util.TreeSet;
-
+/**
+ * @author Пименов Данила P3130
+ * Команда, выводящая информацию о коллекции
+ */
 public class InfoCommand extends Command {
     public InfoCommand(String[] args, TreeSet<SpaceMarine> trg, Cmd cmd) {
         super(args, trg, cmd);
