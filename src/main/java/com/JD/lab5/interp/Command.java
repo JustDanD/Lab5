@@ -10,8 +10,9 @@ public abstract class Command {
     ArrayList<String> arguments;
     TreeSet<SpaceMarine> target;
     Cmd curCMD;
+
     public Command(String[] args, TreeSet<SpaceMarine> trg, Cmd cmd) {
-        if(args != null) {
+        if (args != null) {
             arguments = new ArrayList<String>();
             arguments.addAll(Arrays.asList(args));
         }

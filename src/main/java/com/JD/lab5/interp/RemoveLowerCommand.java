@@ -1,12 +1,8 @@
 package com.JD.lab5.interp;
 
-import com.JD.lab5.data.Chapter;
-import com.JD.lab5.data.Coordinates;
-import com.JD.lab5.data.MeleeWeapon;
 import com.JD.lab5.data.SpaceMarine;
 
 import java.util.Iterator;
-import java.util.Scanner;
 import java.util.TreeSet;
 
 public class RemoveLowerCommand extends Command {
@@ -18,15 +14,23 @@ public class RemoveLowerCommand extends Command {
     @Override
     public void execute() {
         int cnt = 0;
-        SpaceMarine newMarine = Generators.marineGenerate();
+        SpaceMarine newMarine;
+        if (curCMD.getIsInteractive())
+            newMarine = Generators.marineGenerate();
+        else
+            newMarine = Generators.marineJSONGenerate(arguments.get(1));
+        if (newMarine == null) {
+            System.out.println("Broken element");
+            return;
+        }
         Iterator iterator = target.iterator();
-        while(iterator.hasNext()) {
+        while (iterator.hasNext()) {
             Object elem = iterator.next();
-            if (newMarine.compareTo((SpaceMarine)elem) > 0) {
+            if (newMarine.compareTo((SpaceMarine) elem) > 0) {
                 iterator.remove();
                 cnt++;
             }
         }
-        System.out.println("Удалено " + cnt +  " элемента(-ов)");
+        System.out.println("Удалено " + cnt + " элемента(-ов)");
     }
 }

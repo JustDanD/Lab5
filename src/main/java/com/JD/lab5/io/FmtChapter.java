@@ -1,7 +1,6 @@
 package com.JD.lab5.io;
 
 
-
 import com.JD.lab5.data.Chapter;
 import org.supercsv.cellprocessor.CellProcessorAdaptor;
 import org.supercsv.exception.SuperCsvCellProcessorException;
@@ -18,7 +17,7 @@ public class FmtChapter extends CellProcessorAdaptor {
         if (!(value instanceof Chapter)) {
             throw new SuperCsvCellProcessorException("Broken chapter to write", context, this);
         } else {
-            String res = ((Chapter)value).getName() + "," + ((Chapter)value).getParentLegion();
+            String res = ((Chapter) value).getName() + "," + ((Chapter) value).getParentLegion();
             return this.next.execute(res, context);
         }
     }

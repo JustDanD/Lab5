@@ -7,13 +7,14 @@ import com.JD.lab5.data.SpaceMarine;
 import com.JD.lab5.interp.Cmd;
 import com.JD.lab5.io.IO;
 
+import java.util.Collection;
 import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
         TreeSet<SpaceMarine> collection;
         collection = IO.readFrom("FILENAM");
-        Cmd console = Cmd.initCmd(collection);
+        Cmd console = new Cmd(collection, true, null);
         console.listen();
     }
 }

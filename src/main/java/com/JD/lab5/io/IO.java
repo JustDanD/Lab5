@@ -29,6 +29,7 @@ public class IO {
         };
         return processors;
     }
+
     private static CellProcessor[] getWritingProcessors() {
         final CellProcessor[] processors = new CellProcessor[]{
                 new NotNull(new FmtNumber("")), //id
@@ -57,15 +58,15 @@ public class IO {
                 inputTree.add(m);
             }
         } catch (Exception e) {
-            System.out.println("Ошибка загрухки:" + e.getMessage());
+            System.out.println("Ошибка загрузки коллекции:" + e.getMessage());
         }
         return inputTree;
     }
 
     public static void writeTo(String path, TreeSet<SpaceMarine> col) {
-        try  {
+        try {
             ICsvBeanWriter beanWriter = new CsvBeanWriter(new BufferedWriter(new FileWriter(path)), CsvPreference.EXCEL_NORTH_EUROPE_PREFERENCE);
-            final String[] header = new String[] {"id", "name", "coordinates", "creationDate", "health", "heartCount", "loyal", "meleeWeapon", "chapter"};
+            final String[] header = new String[]{"id", "name", "coordinates", "creationDate", "health", "heartCount", "loyal", "meleeWeapon", "chapter"};
             final CellProcessor[] processors = getWritingProcessors();
             beanWriter.writeHeader(header);
             for (final SpaceMarine marine : col) {
@@ -73,8 +74,7 @@ public class IO {
             }
             beanWriter.close();
             System.out.println("Коллекция успешно сохранена");
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("Ошибка сохранения:" + e.getMessage());
         }
     }

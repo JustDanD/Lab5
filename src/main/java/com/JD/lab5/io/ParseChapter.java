@@ -11,9 +11,11 @@ public class ParseChapter extends CellProcessorAdaptor implements StringCellProc
     public ParseChapter() {
 
     }
+
     public ParseChapter(LongCellProcessor next) {
         super(next);
     }
+
     @Override
     public Chapter execute(Object value, CsvContext context) {
         this.validateInputNotNull(value, context);

@@ -2,21 +2,30 @@ package com.JD.lab5.interp;
 
 import com.JD.lab5.data.SpaceMarine;
 
-import java.lang.reflect.InvocationTargetException;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.Stack;
+import java.util.TreeSet;
 
 public class Cmd {
     private HashMap<String, Class> commandsMap;
-    private static Cmd instance;
+    //private static Cmd instance;
     private Stack<String> commandHistory;
     private TreeSet<SpaceMarine> curCollection;
     private LocalDateTime startDate;
+    private boolean isInteractive;
 
-    private Cmd(TreeSet<SpaceMarine> col) {
-        System.out.println("Доброго времени суток, уважаемый юзер.\nДобро пожаловать в систему управления вашей коллекцией космических корбалей!\nПриятного пользования!\nДля просмотра существующих команд введите help.");
+    public Cmd(TreeSet<SpaceMarine> col, boolean isInteractive, Cmd parent) {
+        if (isInteractive) {
+            System.out.println("Доброго времени суток, уважаемый юзер.\nДобро пожаловать в систему управления вашей коллекцией космических корбалей!\nПриятного пользования!\nДля просмотра существующих команд введите help.");
+            startDate = LocalDateTime.now();
+            commandHistory = new Stack<String>();
+        } else {
+            startDate = parent.getStartDate();
+            commandHistory = parent.getCommandHistory();
+        }
+        this.isInteractive = isInteractive;
         commandsMap = new HashMap<String, Class>();
         commandsMap.put("exit", ExitCommand.class);
         commandsMap.put("help", HelpCommand.class);
@@ -33,22 +42,25 @@ public class Cmd {
         commandsMap.put("print_descending", PrintDescendingCommand.class);
         commandsMap.put("remove_any_by_chapter", RemoveByChapterCommand.class);
         commandsMap.put("group_counting_by_heart_count", GroupCommand.class);
+        commandsMap.put("execute_script", ExecuteScriptCommand.class);
         curCollection = col;
-        startDate = LocalDateTime.now();
-        commandHistory = new Stack<String>();
     }
 
     public LocalDateTime getStartDate() {
         return startDate;
     }
 
-    public static Cmd initCmd(TreeSet<SpaceMarine> col) {
+    public boolean getIsInteractive() {
+        return isInteractive;
+    }
+
+    /*public static Cmd initCmd(TreeSet<SpaceMarine> col) {
         if (instance == null)
             instance = new Cmd(col);
         return instance;
-    }
+    }*/
 
-    public void listen()  {
+    public void listen() {
         Scanner in = new Scanner(System.in);
         String curCom = "";
         String[] curArgs;
@@ -60,14 +72,16 @@ public class Cmd {
             try {
                 Class command = (commandsMap.get(curCom));
                 if (command != null) {
-                    Command executedCom = (Command)command.getConstructor(params).newInstance(curArgs, curCollection, instance);
+                    Command executedCom = (Command) command.getConstructor(params).newInstance(curArgs, curCollection, this);
                     executedCom.execute();
                     commandHistory.push(curCom);
-                }
-                else
+                } else
                     System.out.println("Такой команды не существует");
-            }
-            catch (Exception e) {
+                if (!in.hasNext()) {
+                    System.out.println("Выполнение скрипта завершено");
+                    return;
+                }
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }

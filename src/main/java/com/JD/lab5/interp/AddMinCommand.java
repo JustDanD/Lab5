@@ -1,11 +1,7 @@
 package com.JD.lab5.interp;
 
-import com.JD.lab5.data.Chapter;
-import com.JD.lab5.data.Coordinates;
-import com.JD.lab5.data.MeleeWeapon;
 import com.JD.lab5.data.SpaceMarine;
 
-import java.util.Scanner;
 import java.util.TreeSet;
 
 public class AddMinCommand extends Command {
@@ -16,12 +12,19 @@ public class AddMinCommand extends Command {
 
     @Override
     public void execute() {
-        SpaceMarine newMarine = Generators.marineGenerate();
+        SpaceMarine newMarine;
+        if (curCMD.getIsInteractive())
+            newMarine = Generators.marineGenerate();
+        else
+            newMarine = Generators.marineJSONGenerate(arguments.get(1));
+        if (newMarine == null) {
+            System.out.println("Broken element");
+            return;
+        }
         if (newMarine.compareTo(target.first()) < 0) {
             target.add(newMarine);
             System.out.println("Элемент успешно добавлен");
-        }
-        else
+        } else
             System.out.println("Элемент не является наименьшим");
     }
 }

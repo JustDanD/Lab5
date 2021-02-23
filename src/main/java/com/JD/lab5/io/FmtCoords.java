@@ -1,7 +1,6 @@
 package com.JD.lab5.io;
 
 
-
 import com.JD.lab5.data.Coordinates;
 import org.supercsv.cellprocessor.CellProcessorAdaptor;
 import org.supercsv.exception.SuperCsvCellProcessorException;
@@ -18,7 +17,7 @@ public class FmtCoords extends CellProcessorAdaptor {
         if (!(value instanceof Coordinates)) {
             throw new SuperCsvCellProcessorException("Broken coordinates to write", context, this);
         } else {
-            String res = "" + ((Coordinates)value).getX() + "," + ((Coordinates)value).getY();
+            String res = "" + ((Coordinates) value).getX() + "," + ((Coordinates) value).getY();
             return this.next.execute(res, context);
         }
     }

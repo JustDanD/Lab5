@@ -1,11 +1,7 @@
 package com.JD.lab5.interp;
 
-import com.JD.lab5.data.Chapter;
-import com.JD.lab5.data.Coordinates;
-import com.JD.lab5.data.MeleeWeapon;
 import com.JD.lab5.data.SpaceMarine;
 
-import java.util.Scanner;
 import java.util.TreeSet;
 
 public class UpdateCommand extends Command {
@@ -16,21 +12,29 @@ public class UpdateCommand extends Command {
 
     @Override
     public void execute() {
-        for (SpaceMarine marine : target ) {
-          try {
-              if (marine.getId() == Long.parseLong(arguments.get(1))) {
-                  SpaceMarine newMarine = Generators.marineGenerate();
-                  marine.clear();
-                  target.remove(marine);
-                  newMarine.setId(Long.parseLong(arguments.get(1)));
-                  target.add(newMarine);
-                  System.out.println("Элемент успешно обновлён");
-                  return;
-              }
-          }
-          catch (NumberFormatException e) {
-              System.out.println("Неверный формат ID");
-          }
+        SpaceMarine newMarine;
+        if (curCMD.getIsInteractive())
+            newMarine = Generators.marineGenerate();
+        else
+            newMarine = Generators.marineJSONGenerate(arguments.get(2));
+        if (newMarine == null) {
+            System.out.println("Broken element");
+            return;
+        }
+        for (SpaceMarine marine : target) {
+            try {
+                if (marine.getId() == Long.parseLong(arguments.get(1))) {
+
+                    marine.clear();
+                    target.remove(marine);
+                    newMarine.setId(Long.parseLong(arguments.get(1)));
+                    target.add(newMarine);
+                    System.out.println("Элемент успешно обновлён");
+                    return;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Неверный формат ID");
+            }
         }
         System.out.println("Элемент c таким ID не существует");
     }

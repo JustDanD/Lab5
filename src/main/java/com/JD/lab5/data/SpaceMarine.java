@@ -16,12 +16,13 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
     private MeleeWeapon meleeWeapon; // !=null.
     private Chapter chapter; // !=null
     private static Stack<Long> idStack;
+
     public SpaceMarine() {
     }
 
     public SpaceMarine(String name, Coordinates coordinates, Double health, long heartCount, MeleeWeapon meleeWeapon, Chapter chapter) {
         if (idStack == null)
-           initIdStack();
+            initIdStack();
         int i = 0;
         while (idStack.contains(idStack.lastElement() + i))
             i++;
@@ -36,6 +37,7 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
         this.meleeWeapon = meleeWeapon;
         this.chapter = chapter;
     }
+
     public SpaceMarine(String name, Coordinates coordinates, Double health, long heartCount, boolean loyal, MeleeWeapon meleeWeapon, Chapter chapter) {
         this(name, coordinates, health, heartCount, meleeWeapon, chapter);
         this.loyal = loyal;
@@ -49,13 +51,10 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
     public void setId(Long id) {
         if (idStack == null)
             initIdStack();
-        if (!idStack.contains(id))
-        {
+        if (!idStack.contains(id)) {
             this.id = id;
             idStack.push(id);
-        }
-        else
-        {
+        } else {
             this.id = idStack.lastElement() + 1;
             idStack.push(this.id);
         }
@@ -76,18 +75,25 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
     public void setCoordinates(Coordinates coordinates) {
         this.coordinates = coordinates;
     }
+
     public void setCoordinatesX(Long coordinates) {
         this.coordinates.setX(coordinates);
     }
+
     public void setCoordinatesY(Float coordinates) {
         this.coordinates.setY(coordinates);
     }
+
     public Date getCreationDate() {
         return Date.from(creationDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
     }
 
     public void setCreationDate(java.util.Date creationDate) {
         this.creationDate = new java.sql.Date(creationDate.getTime()).toLocalDate();
+    }
+
+    public void setCreationDateAuto() {
+        this.creationDate = LocalDate.now();
     }
 
     public Double getHealth() {
@@ -137,6 +143,7 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
     public void setLegion(String Legion) {
         this.chapter.setParentLegion(Legion);
     }
+
     private static void initIdStack() {
         idStack = new Stack<Long>();
         idStack.push(0L);

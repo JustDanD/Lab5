@@ -16,7 +16,7 @@ public class FmtMeleeWeapon extends CellProcessorAdaptor {
         if (!(value instanceof MeleeWeapon)) {
             throw new SuperCsvCellProcessorException("Broken weapon to write", context, this);
         } else {
-            String res = "" + ((MeleeWeapon)value);
+            String res = "" + ((MeleeWeapon) value);
             return this.next.execute(res, context);
         }
     }

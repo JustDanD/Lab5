@@ -1,11 +1,7 @@
 package com.JD.lab5.interp;
 
-import com.JD.lab5.data.Chapter;
-import com.JD.lab5.data.Coordinates;
-import com.JD.lab5.data.MeleeWeapon;
 import com.JD.lab5.data.SpaceMarine;
 
-import java.util.Scanner;
 import java.util.TreeSet;
 
 public class AddCommand extends Command {
@@ -16,7 +12,16 @@ public class AddCommand extends Command {
 
     @Override
     public void execute() {
-        target.add(Generators.marineGenerate());
-        System.out.println("Элемент успешно добавлен");
+        if (curCMD.getIsInteractive()) {
+            target.add(Generators.marineGenerate());
+            System.out.println("Элемент успешно добавлен");
+        } else {
+            SpaceMarine newMarine = Generators.marineJSONGenerate(arguments.get(1));
+            if (newMarine != null) {
+                target.add(newMarine);
+                System.out.println("Элемент успешно добавлен");
+            } else
+                System.out.println("Элемент добавить не удалось");
+        }
     }
 }

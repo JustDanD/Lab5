@@ -1,7 +1,6 @@
 package com.JD.lab5.interp;
 
 
-
 import com.JD.lab5.data.SpaceMarine;
 
 import java.util.TreeSet;
@@ -10,6 +9,7 @@ public class HelpCommand extends Command {
     public HelpCommand(String[] args, TreeSet<SpaceMarine> trg, Cmd cmd) {
         super(args, trg, cmd);
     }
+
     @Override
     public void execute() {
         System.out.println("Список доступных комманд:\nhelp - справка\ninfo - вывести информацию о коллекции\nshow - вывести все элементы коллекции\nadd - добавить элемент в коллекцию\n" +
