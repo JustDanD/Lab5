@@ -26,7 +26,7 @@ public class AddMinCommand extends Command {
             System.out.println("Broken element");
             return;
         }
-        if (newMarine.compareTo(target.first()) < 0) {
+        if (target.size() == 0 || newMarine.compareTo(target.first()) < 0) {
             target.add(newMarine);
             System.out.println("Элемент успешно добавлен");
         } else

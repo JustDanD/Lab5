@@ -72,7 +72,7 @@ public class IO {
                 inputTree.add(m);
             }
         } catch (Exception e) {
-            System.out.println("Ошибка загрузки коллекции:" + e.getMessage());
+            System.out.println("Ошибка загрузshки коллекции:" + e.getMessage());
         }
         return inputTree;
     }
