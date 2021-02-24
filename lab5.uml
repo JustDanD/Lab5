@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.jd.lab5</OriginalElement>
+  <nodes>
+    <node x="8081.003891320097" y="606.5">com.jd.lab5.io.ParseCoordinates</node>
+    <node x="3701.5425438596485" y="12.0">com.jd.lab5.data.Chapter</node>
+    <node x="5240.47894736842" y="1525.0">com.jd.lab5.interp.ShowCommand</node>
+    <node x="6606.161056204967" y="606.5">com.jd.lab5.io.ParseChapter</node>
+    <node x="3763.2092105263155" y="368.0">com.jd.lab5.data.SpaceMarine</node>
+    <node x="4779.47894736842" y="1525.0">com.jd.lab5.interp.RemoveCommand</node>
+    <node x="7010.47894736842" y="1525.0">com.jd.lab5.interp.SaveCommand</node>
+    <node x="3301.8999999999996" y="1512.0">com.jd.lab5.interp.ExecuteScriptCommand</node>
+    <node x="5659.4340019971805" y="2111.0">com.jd.lab5.Main</node>
+    <node x="1473.8999999999996" y="1525.0">com.jd.lab5.interp.AddCommand</node>
+    <node x="8426.003891320097" y="619.0">com.jd.lab5.io.FmtCoords</node>
+    <node x="7776.003891320097" y="619.0">com.jd.lab5.io.FmtMeleeWeapon</node>
+    <node x="3606.1894736842105" y="1113.0">com.jd.lab5.interp.Command</node>
+    <node x="6560.47894736842" y="1525.0">com.jd.lab5.interp.GroupCommand</node>
+    <node x="7458.753891320097" y="619.0">com.jd.lab5.io.FmtChapter</node>
+    <node x="25.899999999999636" y="1525.0">com.jd.lab5.interp.RemoveByChapterCommand</node>
+    <node x="7648.036056204967" y="24.5">com.jd.lab5.data.Coordinates</node>
+    <node x="4340.47894736842" y="1525.0">com.jd.lab5.interp.HelpCommand</node>
+    <node x="3819.4789473684204" y="1525.0">com.jd.lab5.interp.PrintDescendingCommand</node>
+    <node x="3699.341896734023" y="1851.0">com.jd.lab5.interp.Cmd</node>
+    <node x="1907.8999999999996" y="1525.0">com.jd.lab5.interp.RemoveLowerCommand</node>
+    <node x="2411.8999999999996" y="1525.0">com.jd.lab5.interp.InfoCommand</node>
+    <node x="3927.5425438596485" y="0.0">com.jd.lab5.data.MeleeWeapon</node>
+    <node x="2845.8999999999996" y="1525.0">com.jd.lab5.interp.HistoryCommand</node>
+    <node x="223.75554927357462" y="1126.5">com.jd.lab5.interp.Generators</node>
+    <node x="557.8999999999996" y="1525.0">com.jd.lab5.interp.AddMinCommand</node>
+    <node x="6128.47894736842" y="1525.0">com.jd.lab5.interp.ExitCommand</node>
+    <node x="5685.47894736842" y="1525.0">com.jd.lab5.interp.ClearCommand</node>
+    <node x="7471.840789473684" y="1126.5">com.jd.lab5.io.IO</node>
+    <node x="1017.8999999999996" y="1525.0">com.jd.lab5.interp.UpdateCommand</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.jd.lab5.data.SpaceMarine" target="com.jd.lab5.data.Chapter">
+      <point x="-252.91666666666697" y="-292.5" />
+      <point x="3813.7925438596485" y="308.0" />
+      <point x="3791.6675438596485" y="308.0" />
+      <point x="-12.875" y="92.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.AddCommand" target="com.jd.lab5.interp.Generators">
+      <point x="-155.25" y="-41.5" />
+      <point x="1525.6499999999996" y="1302.0" />
+      <point x="460.3555492735745" y="1302.0" />
+      <point x="67.60000000000002" y="66.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.ExecuteScriptCommand">
+      <point x="-41.80263157894751" y="-105.0" />
+      <point x="3834.0392651550756" y="1691.0" />
+      <point x="3381.5666666666666" y="1691.0" />
+      <point x="-159.33333333333303" y="54.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.UpdateCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="-54.5" y="-41.5" />
+      <point x="1181.3999999999996" y="1332.0" />
+      <point x="1227.6499999999996" y="1332.0" />
+      <point x="1227.6499999999996" y="1023.0" />
+      <point x="3877.0217105263155" y="1023.0" />
+      <point x="-189.6875" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.GroupCommand">
+      <point x="125.40789473684208" y="-105.0" />
+      <point x="4001.249791470865" y="1781.0" />
+      <point x="6667.97894736842" y="1781.0" />
+      <point x="-107.5" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.AddCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="-51.75" y="-41.5" />
+      <point x="1629.1499999999996" y="1033.0" />
+      <point x="3902.3133771929815" y="1033.0" />
+      <point x="-164.39583333333348" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.GroupCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="143.33333333333348" y="-41.5" />
+      <point x="6918.8122807017535" y="1352.0" />
+      <point x="6747.622130766371" y="1352.0" />
+      <point x="6747.622130766371" y="1033.0" />
+      <point x="4231.105043859649" y="1033.0" />
+      <point x="164.39583333333394" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.ExitCommand">
+      <point x="106.82894736842127" y="-105.0" />
+      <point x="3982.6708441024443" y="1761.0" />
+      <point x="6231.47894736842" y="1761.0" />
+      <point x="-103.0" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.ClearCommand" target="com.jd.lab5.interp.Command">
+      <point x="-141.0" y="-41.5" />
+      <point x="5755.97894736842" y="1412.0" />
+      <point x="3910.260902255639" y="1412.0" />
+      <point x="110.57142857142844" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Command" target="com.jd.lab5.data.SpaceMarine">
+      <point x="-96.75" y="-79.5" />
+      <point x="3702.9394736842105" y="1083.0" />
+      <point x="4028.7717105263155" y="1083.0" />
+      <point x="-37.9375" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.HistoryCommand" target="com.jd.lab5.interp.Command">
+      <point x="0.0" y="-41.5" />
+      <point x="3063.8999999999996" y="1462.0" />
+      <point x="3744.403759398496" y="1462.0" />
+      <point x="-55.28571428571422" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.ClearCommand">
+      <point x="88.25" y="-105.0" />
+      <point x="3964.091896734023" y="1741.0" />
+      <point x="5791.22894736842" y="1741.0" />
+      <point x="-105.75" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.ExecuteScriptCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="0.0" y="54.5" />
+      <point x="3540.8999999999996" y="1681.0" />
+      <point x="3843.3287388392864" y="1681.0" />
+      <point x="-32.51315789473665" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.PrintDescendingCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="167.0" y="-41.5" />
+      <point x="4236.97894736842" y="1093.0" />
+      <point x="4079.3550438596485" y="1093.0" />
+      <point x="12.645833333333485" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.UpdateCommand" target="com.jd.lab5.interp.Generators">
+      <point x="-163.5" y="-41.5" />
+      <point x="1072.3999999999996" y="1312.0" />
+      <point x="392.7555492735746" y="1312.0" />
+      <point x="0.0" y="66.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.HelpCommand">
+      <point x="32.51315789473665" y="-105.0" />
+      <point x="3908.3550546287597" y="1681.0" />
+      <point x="4445.22894736842" y="1681.0" />
+      <point x="-104.75" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.RemoveCommand" target="com.jd.lab5.interp.Command">
+      <point x="-147.0" y="-41.5" />
+      <point x="4852.97894736842" y="1452.0" />
+      <point x="3866.032330827067" y="1452.0" />
+      <point x="66.34285714285716" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.ShowCommand">
+      <point x="69.67105263157919" y="-105.0" />
+      <point x="3945.5129493656023" y="1721.0" />
+      <point x="5346.72894736842" y="1721.0" />
+      <point x="-106.25" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.RemoveCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="110.25" y="41.5" />
+      <point x="5110.22894736842" y="1711.0" />
+      <point x="3936.2234756813914" y="1711.0" />
+      <point x="60.381578947368325" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.HelpCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="104.75" y="41.5" />
+      <point x="4654.72894736842" y="1691.0" />
+      <point x="3917.6445283129706" y="1691.0" />
+      <point x="41.80263157894751" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.HelpCommand" target="com.jd.lab5.interp.Command">
+      <point x="0.0" y="-41.5" />
+      <point x="4549.97894736842" y="1462.0" />
+      <point x="3854.9751879699243" y="1462.0" />
+      <point x="55.28571428571422" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.RemoveLowerCommand" target="com.jd.lab5.interp.Command">
+      <point x="60.5" y="-41.5" />
+      <point x="2210.3999999999996" y="1422.0" />
+      <point x="3700.175187969925" y="1422.0" />
+      <point x="-99.5142857142855" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.ExecuteScriptCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="-159.33333333333303" y="-54.5" />
+      <point x="3381.5666666666666" y="1073.0" />
+      <point x="4003.4800438596485" y="1073.0" />
+      <point x="-63.229166666666515" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.AddMinCommand" target="com.jd.lab5.interp.Command">
+      <point x="55.0" y="-41.5" />
+      <point x="832.8999999999996" y="1362.0" />
+      <point x="3633.8323308270674" y="1362.0" />
+      <point x="-165.85714285714266" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.RemoveLowerCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="121.0" y="41.5" />
+      <point x="2270.8999999999996" y="1741.0" />
+      <point x="3787.591896734023" y="1741.0" />
+      <point x="-88.25" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.SaveCommand">
+      <point x="143.98684210526335" y="-105.0" />
+      <point x="4019.8287388392864" y="1801.0" />
+      <point x="7114.97894736842" y="1801.0" />
+      <point x="-104.5" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.io.IO" target="com.jd.lab5.io.ParseCoordinates">
+      <point x="87.0" y="-66.0" />
+      <point x="7732.840789473684" y="1083.0" />
+      <point x="8243.503891320097" y="1083.0" />
+      <point x="0.0" y="54.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.RemoveByChapterCommand" target="com.jd.lab5.interp.Command">
+      <point x="204.8" y="-41.5" />
+      <point x="486.6999999999998" y="1352.0" />
+      <point x="3622.7751879699244" y="1352.0" />
+      <point x="-176.9142857142856" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.RemoveLowerCommand">
+      <point x="-97.5394736842104" y="-105.0" />
+      <point x="3778.3024230498127" y="1751.0" />
+      <point x="2028.8999999999996" y="1751.0" />
+      <point x="-121.0" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.ShowCommand" target="com.jd.lab5.interp.Command">
+      <point x="-141.66666666666697" y="-41.5" />
+      <point x="5311.3122807017535" y="1432.0" />
+      <point x="3888.146616541353" y="1432.0" />
+      <point x="88.45714285714257" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.io.FmtChapter" target="com.jd.lab5.data.Chapter">
+      <point x="0.0" y="-41.5" />
+      <point x="7601.253891320097" y="268.0" />
+      <point x="3894.6675438596485" y="268.0" />
+      <point x="90.125" y="92.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.InfoCommand">
+      <point x="-78.96052631578914" y="-105.0" />
+      <point x="3796.881370418234" y="1731.0" />
+      <point x="2515.3999999999996" y="1731.0" />
+      <point x="-103.5" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.RemoveLowerCommand" target="com.jd.lab5.interp.Generators">
+      <point x="-181.5" y="-41.5" />
+      <point x="1968.3999999999996" y="1292.0" />
+      <point x="527.9555492735744" y="1292.0" />
+      <point x="135.20000000000005" y="66.0" />
+    </edge>
+    <edge source="com.jd.lab5.io.IO" target="com.jd.lab5.io.FmtMeleeWeapon">
+      <point x="29.0" y="-66.0" />
+      <point x="7674.840789473684" y="1073.0" />
+      <point x="7918.503891320097" y="1073.0" />
+      <point x="0.0" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.UpdateCommand">
+      <point x="-134.6973684210525" y="-105.0" />
+      <point x="3741.1445283129706" y="1791.0" />
+      <point x="1126.8999999999996" y="1791.0" />
+      <point x="-109.0" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.SaveCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="52.25" y="-41.5" />
+      <point x="7271.72894736842" y="1023.0" />
+      <point x="4256.3967105263155" y="1023.0" />
+      <point x="189.6875" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.io.FmtMeleeWeapon" target="com.jd.lab5.data.MeleeWeapon">
+      <point x="0.0" y="-41.5" />
+      <point x="7918.503891320097" y="258.0" />
+      <point x="4224.1675438596485" y="258.0" />
+      <point x="127.125" y="104.0" />
+    </edge>
+    <edge source="com.jd.lab5.io.ParseChapter" target="com.jd.lab5.data.Chapter">
+      <point x="-74.0" y="-54.0" />
+      <point x="6680.161056204967" y="288.0" />
+      <point x="3843.1675438596485" y="288.0" />
+      <point x="38.625" y="92.0" />
+    </edge>
+    <edge source="com.jd.lab5.io.IO" target="com.jd.lab5.data.SpaceMarine">
+      <point x="-145.0" y="-66.0" />
+      <point x="7500.840789473684" y="983.0" />
+      <point x="4357.563377192982" y="983.0" />
+      <point x="290.85416666666697" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.io.IO" target="com.jd.lab5.io.FmtChapter">
+      <point x="-29.0" y="-66.0" />
+      <point x="7616.840789473684" y="1093.0" />
+      <point x="7601.253891320097" y="1093.0" />
+      <point x="0.0" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.io.IO" target="com.jd.lab5.io.ParseChapter">
+      <point x="-87.0" y="-66.0" />
+      <point x="7558.840789473684" y="973.0" />
+      <point x="6754.161056204967" y="973.0" />
+      <point x="0.0" y="54.0" />
+    </edge>
+    <edge source="com.jd.lab5.Main" target="com.jd.lab5.io.IO">
+      <point x="66.0" y="-28.5" />
+      <point x="5813.4340019971805" y="2091.0" />
+      <point x="7732.840789473684" y="2091.0" />
+      <point x="87.0" y="66.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.UpdateCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="109.0" y="41.5" />
+      <point x="1344.8999999999996" y="1781.0" />
+      <point x="3750.434001997181" y="1781.0" />
+      <point x="-125.40789473684208" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.ExitCommand" target="com.jd.lab5.interp.Command">
+      <point x="0.0" y="-41.5" />
+      <point x="6334.47894736842" y="1382.0" />
+      <point x="3943.4323308270677" y="1382.0" />
+      <point x="143.74285714285725" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.SaveCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="104.5" y="41.5" />
+      <point x="7323.97894736842" y="1811.0" />
+      <point x="4029.118212523497" y="1811.0" />
+      <point x="153.27631578947376" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.InfoCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="-138.0" y="-41.5" />
+      <point x="2480.8999999999996" y="1332.0" />
+      <point x="2704.306169476424" y="1332.0" />
+      <point x="2704.306169476424" y="1053.0" />
+      <point x="3952.8967105263155" y="1053.0" />
+      <point x="-113.8125" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.io.FmtCoords" target="com.jd.lab5.data.Coordinates">
+      <point x="0.0" y="-41.5" />
+      <point x="8568.503891320097" y="228.0" />
+      <point x="7868.952722871634" y="228.0" />
+      <point x="100.41666666666697" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.AddMinCommand">
+      <point x="-153.2763157894733" y="-105.0" />
+      <point x="3722.5655809445498" y="1811.0" />
+      <point x="667.8999999999996" y="1811.0" />
+      <point x="-110.0" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Generators" target="com.jd.lab5.data.Coordinates">
+      <point x="28.166666666666515" y="-66.0" />
+      <point x="420.92221594024113" y="973.0" />
+      <point x="547.5666666666666" y="973.0" />
+      <point x="547.5666666666666" y="328.0" />
+      <point x="7668.1193895383" y="328.0" />
+      <point x="-100.41666666666697" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.AddCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="103.5" y="41.5" />
+      <point x="1784.3999999999996" y="1761.0" />
+      <point x="3769.0129493656023" y="1761.0" />
+      <point x="-106.82894736842081" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.InfoCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="103.5" y="41.5" />
+      <point x="2722.3999999999996" y="1721.0" />
+      <point x="3806.1708441024443" y="1721.0" />
+      <point x="-69.67105263157873" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Generators" target="com.jd.lab5.data.SpaceMarine">
+      <point x="84.5" y="-66.0" />
+      <point x="477.2555492735746" y="983.0" />
+      <point x="3775.8550438596485" y="983.0" />
+      <point x="-290.8541666666665" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.GroupCommand" target="com.jd.lab5.interp.Command">
+      <point x="-143.33333333333348" y="-41.5" />
+      <point x="6632.145614035087" y="1372.0" />
+      <point x="3954.4894736842107" y="1372.0" />
+      <point x="154.80000000000018" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.data.SpaceMarine">
+      <point x="162.56578947368416" y="-105.0" />
+      <point x="4038.4076862077072" y="1821.0" />
+      <point x="7438.97894736842" y="1821.0" />
+      <point x="7438.97894736842" y="1013.0" />
+      <point x="4281.688377192982" y="1013.0" />
+      <point x="214.97916666666697" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.data.SpaceMarine" target="com.jd.lab5.data.Coordinates">
+      <point x="151.75" y="-292.5" />
+      <point x="4218.4592105263155" y="338.0" />
+      <point x="7708.286056204967" y="338.0" />
+      <point x="-60.25" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.HistoryCommand">
+      <point x="-60.381578947368325" y="-105.0" />
+      <point x="3815.4603177866547" y="1711.0" />
+      <point x="2954.8999999999996" y="1711.0" />
+      <point x="-109.0" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.SaveCommand" target="com.jd.lab5.io.IO">
+      <point x="156.75" y="-41.5" />
+      <point x="7376.22894736842" y="1492.0" />
+      <point x="7558.840789473684" y="1492.0" />
+      <point x="-87.0" y="66.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.RemoveByChapterCommand" target="com.jd.lab5.interp.Generators">
+      <point x="-102.39999999999998" y="-41.5" />
+      <point x="179.5" y="1492.0" />
+      <point x="257.5555492735748" y="1492.0" />
+      <point x="-135.2" y="66.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.ShowCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="106.25" y="41.5" />
+      <point x="5559.22894736842" y="1731.0" />
+      <point x="3954.8024230498127" y="1731.0" />
+      <point x="78.9605263157896" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.HistoryCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="-145.33333333333348" y="-41.5" />
+      <point x="2918.566666666666" y="1332.0" />
+      <point x="2928.6395028097577" y="1332.0" />
+      <point x="2928.6395028097577" y="1063.0" />
+      <point x="3978.1883771929824" y="1063.0" />
+      <point x="-88.52083333333303" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.AddMinCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="-55.0" y="-41.5" />
+      <point x="722.8999999999996" y="1332.0" />
+      <point x="992.8999999999996" y="1332.0" />
+      <point x="992.8999999999996" y="1013.0" />
+      <point x="3851.7300438596485" y="1013.0" />
+      <point x="-214.97916666666652" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.PrintDescendingCommand" target="com.jd.lab5.interp.Command">
+      <point x="-167.0" y="-41.5" />
+      <point x="3902.9789473684204" y="1492.0" />
+      <point x="3821.8037593984964" y="1492.0" />
+      <point x="22.11428571428587" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.Main" target="com.jd.lab5.data.SpaceMarine">
+      <point x="22.0" y="-28.5" />
+      <point x="5769.4340019971805" y="2081.0" />
+      <point x="7461.340789473684" y="2081.0" />
+      <point x="7461.340789473684" y="993.0" />
+      <point x="4332.2717105263155" y="993.0" />
+      <point x="265.5625" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.AddCommand">
+      <point x="-116.11842105263167" y="-105.0" />
+      <point x="3759.7234756813914" y="1771.0" />
+      <point x="1577.3999999999996" y="1771.0" />
+      <point x="-103.5" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.RemoveByChapterCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="0.0" y="-41.5" />
+      <point x="281.89999999999964" y="1332.0" />
+      <point x="673.6409659402411" y="1332.0" />
+      <point x="673.6409659402411" y="1003.0" />
+      <point x="3826.4383771929815" y="1003.0" />
+      <point x="-240.27083333333348" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.ShowCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="141.66666666666697" y="-41.5" />
+      <point x="5594.645614035087" y="1063.0" />
+      <point x="4155.2300438596485" y="1063.0" />
+      <point x="88.52083333333348" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.io.IO" target="com.jd.lab5.io.FmtCoords">
+      <point x="145.0" y="-66.0" />
+      <point x="7790.840789473684" y="1093.0" />
+      <point x="8568.503891320097" y="1093.0" />
+      <point x="0.0" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.AddMinCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="110.0" y="41.5" />
+      <point x="887.8999999999996" y="1801.0" />
+      <point x="3731.85505462876" y="1801.0" />
+      <point x="-143.9868421052629" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.ClearCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="141.0" y="-41.5" />
+      <point x="6037.97894736842" y="1053.0" />
+      <point x="4180.5217105263155" y="1053.0" />
+      <point x="113.8125" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.PrintDescendingCommand">
+      <point x="13.934210526315837" y="-105.0" />
+      <point x="3889.776107260339" y="1661.0" />
+      <point x="3944.7289473684204" y="1661.0" />
+      <point x="-125.25" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.RemoveByChapterCommand" target="com.jd.lab5.data.Chapter">
+      <point x="-204.80000000000018" y="-41.5" />
+      <point x="77.09999999999945" y="1492.0" />
+      <point x="0.0" y="1492.0" />
+      <point x="0.0" y="288.0" />
+      <point x="3714.4175438596485" y="288.0" />
+      <point x="-90.125" y="92.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.RemoveByChapterCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="128.0" y="41.5" />
+      <point x="409.89999999999964" y="1821.0" />
+      <point x="3713.276107260339" y="1821.0" />
+      <point x="-162.56578947368416" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.Main" target="com.jd.lab5.interp.Cmd">
+      <point x="-66.0" y="-28.5" />
+      <point x="5681.4340019971805" y="2091.0" />
+      <point x="3787.591896734023" y="2091.0" />
+      <point x="-88.25" y="105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.ExecuteScriptCommand" target="com.jd.lab5.interp.Command">
+      <point x="159.33333333333303" y="-54.5" />
+      <point x="3700.2333333333327" y="1492.0" />
+      <point x="3777.5751879699246" y="1492.0" />
+      <point x="-22.11428571428587" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.ExitCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="137.3333333333328" y="-41.5" />
+      <point x="6471.8122807017535" y="1043.0" />
+      <point x="4205.813377192982" y="1043.0" />
+      <point x="139.10416666666697" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.HelpCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="139.66666666666697" y="-41.5" />
+      <point x="4689.645614035087" y="1083.0" />
+      <point x="4104.6467105263155" y="1083.0" />
+      <point x="37.9375" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.RemoveCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="147.0" y="-41.5" />
+      <point x="5146.97894736842" y="1073.0" />
+      <point x="4129.938377192982" y="1073.0" />
+      <point x="63.22916666666697" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Command" target="com.jd.lab5.interp.Cmd">
+      <point x="11.057142857142935" y="79.5" />
+      <point x="3810.7466165413534" y="1492.0" />
+      <point x="3808.9789473684204" y="1492.0" />
+      <point x="3808.9789473684204" y="1641.0" />
+      <point x="3880.4866335761285" y="1641.0" />
+      <point x="4.644736842105431" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.PrintDescendingCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="125.25" y="41.5" />
+      <point x="4195.22894736842" y="1671.0" />
+      <point x="3899.0655809445493" y="1671.0" />
+      <point x="23.223684210526244" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.io.ParseCoordinates" target="com.jd.lab5.data.Coordinates">
+      <point x="-81.25" y="-54.0" />
+      <point x="8162.253891320097" y="248.0" />
+      <point x="7788.6193895383" y="248.0" />
+      <point x="20.08333333333303" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.Command">
+      <point x="-4.644736842104976" y="-105.0" />
+      <point x="3871.197159891918" y="1651.0" />
+      <point x="3799.6894736842105" y="1651.0" />
+      <point x="0.0" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.RemoveByChapterCommand">
+      <point x="-171.85526315789457" y="-105.0" />
+      <point x="3703.9866335761285" y="1831.0" />
+      <point x="153.89999999999964" y="1831.0" />
+      <point x="-128.0" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.ClearCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="105.75" y="41.5" />
+      <point x="6002.72894736842" y="1751.0" />
+      <point x="3973.3813704182335" y="1751.0" />
+      <point x="97.5394736842104" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.HistoryCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="109.0" y="41.5" />
+      <point x="3172.8999999999996" y="1701.0" />
+      <point x="3824.749791470865" y="1701.0" />
+      <point x="-51.09210526315792" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.RemoveLowerCommand" target="com.jd.lab5.data.SpaceMarine">
+      <point x="-60.5" y="-41.5" />
+      <point x="2089.3999999999996" y="1043.0" />
+      <point x="3927.6050438596485" y="1043.0" />
+      <point x="-139.10416666666652" y="292.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.SaveCommand" target="com.jd.lab5.interp.Command">
+      <point x="-52.25" y="-41.5" />
+      <point x="7167.22894736842" y="1332.0" />
+      <point x="3987.6609022556386" y="1332.0" />
+      <point x="187.97142857142853" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.ExitCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="103.0" y="41.5" />
+      <point x="6437.47894736842" y="1771.0" />
+      <point x="3991.9603177866547" y="1771.0" />
+      <point x="116.11842105263167" y="-105.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.AddCommand" target="com.jd.lab5.interp.Command">
+      <point x="51.75" y="-41.5" />
+      <point x="1732.6499999999996" y="1402.0" />
+      <point x="3678.060902255639" y="1402.0" />
+      <point x="-121.62857142857138" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.UpdateCommand" target="com.jd.lab5.interp.Command">
+      <point x="163.5" y="-41.5" />
+      <point x="1399.3999999999996" y="1392.0" />
+      <point x="3667.003759398496" y="1392.0" />
+      <point x="-132.6857142857143" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Generators" target="com.jd.lab5.data.MeleeWeapon">
+      <point x="-28.166666666666515" y="-66.0" />
+      <point x="364.5888826069081" y="1093.0" />
+      <point x="387.2555492735746" y="1093.0" />
+      <point x="387.2555492735746" y="318.0" />
+      <point x="3969.9175438596485" y="318.0" />
+      <point x="-127.125" y="104.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Generators" target="com.jd.lab5.data.Chapter">
+      <point x="-84.5" y="-66.0" />
+      <point x="308.2555492735746" y="1093.0" />
+      <point x="265.0055492735746" y="1093.0" />
+      <point x="265.0055492735746" y="308.0" />
+      <point x="3765.9175438596485" y="308.0" />
+      <point x="-38.625" y="92.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.AddMinCommand" target="com.jd.lab5.interp.Generators">
+      <point x="-165.0" y="-41.5" />
+      <point x="612.8999999999996" y="1322.0" />
+      <point x="325.1555492735747" y="1322.0" />
+      <point x="-67.60000000000002" y="66.0" />
+    </edge>
+    <edge source="com.jd.lab5.data.SpaceMarine" target="com.jd.lab5.data.MeleeWeapon">
+      <point x="-50.583333333333485" y="-292.5" />
+      <point x="4016.1258771929815" y="318.0" />
+      <point x="4054.6675438596485" y="318.0" />
+      <point x="-42.375" y="104.0" />
+    </edge>
+    <edge source="com.jd.lab5.interp.InfoCommand" target="com.jd.lab5.interp.Command">
+      <point x="0.0" y="-41.5" />
+      <point x="2618.8999999999996" y="1442.0" />
+      <point x="3722.28947368421" y="1442.0" />
+      <point x="-77.40000000000009" y="79.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.Cmd" target="com.jd.lab5.interp.RemoveCommand">
+      <point x="51.09210526315792" y="-105.0" />
+      <point x="3926.934001997181" y="1701.0" />
+      <point x="4889.72894736842" y="1701.0" />
+      <point x="-110.25" y="41.5" />
+    </edge>
+    <edge source="com.jd.lab5.interp.GroupCommand" target="com.jd.lab5.interp.Cmd">
+      <point x="107.5" y="41.5" />
+      <point x="6882.97894736842" y="1791.0" />
+      <point x="4010.5392651550756" y="1791.0" />
+      <point x="134.6973684210525" y="-105.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="8369.666666666666" y="683.3333333333329" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
