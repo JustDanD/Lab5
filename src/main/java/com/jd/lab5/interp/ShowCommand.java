@@ -14,6 +14,8 @@ public class ShowCommand extends Command {
 
     @Override
     public void execute() {
+        if (target.size() == 0)
+            System.out.print("Пустая коллекция");
         for (SpaceMarine marine : super.target)
             System.out.print(marine.toString());
     }
