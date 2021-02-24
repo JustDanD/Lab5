@@ -78,10 +78,10 @@ public class Cmd {
         String[] curArgs;
         Class[] params = {String[].class, TreeSet.class, Cmd.class};
         while (true) {
-            curCom = in.next();
-            curArgs = in.nextLine().split(" ");
-
             try {
+            curCom = in.next();
+            curArgs = in.nextLine().replaceAll(" +", " ").split(" ");
+
                 Class command = (commandsMap.get(curCom));
                 if (command != null) {
                     Command executedCom = (Command)(command.getConstructor(params).newInstance(curArgs, curCollection, this));
@@ -94,6 +94,10 @@ public class Cmd {
                     return;
                 }
             } catch (Exception e) {
+                if (!in.hasNext()) {
+                    System.out.println("Входной поток умер. Возможно, вы нажали ctrl + D. Аварийное(не очень) закрытие.");
+                    System.exit(-1);
+                }
                 System.out.println(e.getMessage());
             }
         }
