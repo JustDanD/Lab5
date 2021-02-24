@@ -25,6 +25,10 @@ public class ExecuteScriptCommand extends Command {
     @Override
     public void execute() {
         InputStream oldIn = System.in;
+        if (arguments.size() < 2) {
+            System.out.println("Не указано имя скрипта");
+            return;
+        }
         if (executedScripts.contains(arguments.get(1))) {
             System.out.println("Не бывать в нашем царстве рекурсии.");
             return;
